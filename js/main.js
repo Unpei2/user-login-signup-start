@@ -41,9 +41,8 @@ function returnthing (username, password){
 signInBtn.addEventListener('click', signInHandler);
 
 function signInHandler() {
-  console.log('Sign In Btn Clicked');
-  let usersign = document.getElementById("usersign")
-  let passwordsign = document.getElementById("passwordsign")
+  let usersign = document.getElementById("usersign").value
+  let passwordsign = document.getElementById("passwordsign").value
   user = false
   pass = false
   for (i = 0;i < array.length; i++){

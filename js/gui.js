@@ -12,6 +12,7 @@ signInLink.addEventListener('click', displaySignIn);
 function displaySignIn() {
   signUpDiv.style.display = 'none';
   signInDiv.style.display = 'block';
+ 
 }
 
 // Sign Up Link Clicked
@@ -20,4 +21,5 @@ signUpLink.addEventListener('click', displaySignUp);
 function displaySignUp() {
   signInDiv.style.display = 'none';
   signUpDiv.style.display = 'block';
+  
 }
