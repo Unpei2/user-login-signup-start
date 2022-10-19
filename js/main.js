@@ -8,6 +8,7 @@ let array = getlocal()
 signUpBtn.addEventListener('click', signUpHandler);
 
 function signUpHandler() {
+  let empty = false
   let taken = false
   let same = true
   let usersignup = document.getElementById("usernamesignup").value
@@ -18,11 +19,15 @@ function signUpHandler() {
       taken = true
     }
   }
+  if (passwordsignup === ""){
+    alert("Please enter a password.")
+    empty = true
+  }
   if (passwordsignup !== confirmpass){
     alert("Passwords do not match, please try again.")
     same = false
   } 
-  if (!taken && same) {
+  if (!taken && same && !empty) {
     array.push(returnthing(usersignup, passwordsignup))
     savelocal()
     alert("Sign Up Completed")
